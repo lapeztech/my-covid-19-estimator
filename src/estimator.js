@@ -56,8 +56,6 @@ const covid19ImpactEstimator = (data) => {
         }
 
 
-        console.log(data, data.reportedCases, time)
-
         reportedCases = data.reportedCases;
 
         // Challenge One
@@ -182,7 +180,7 @@ const covid19ImpactEstimator = (data) => {
             severeImpactdollarsInFlight
         }
 
-        // form.reset()
+        form.reset()
 
 
         // Export information to ui
@@ -240,13 +238,9 @@ const covid19ImpactEstimator = (data) => {
         severeImpactCasesForVentilatorsByRequestedTimeData.textContent = ' ' + severeImpact.severeImpactCasesForVentilatorsByRequestedTime;
         severeImpactdollarsInFlightData.textContent = ' ' + severeImpact.severeImpactdollarsInFlight;
 
-        console.log(data, impact, severeImpact);
-
     })
 
 }
-
+covid19ImpactEstimator(data);
 
 // export default covid19ImpactEstimator;
-
-covid19ImpactEstimator(data);
