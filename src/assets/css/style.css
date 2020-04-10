@@ -1,0 +1,96 @@
+.navbar{
+    background-color: rgb(0, 12, 10)!important;
+}
+
+nav a, .navbar-brand, .btn{
+    color: rgb(39, 243, 199);
+    background-color:  rgb(0, 12, 10);
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+ a:hover{
+    color: rgb(1, 46, 42);
+    background-color:  rgb(39, 243, 199);
+    border-radius: 15px;
+}
+
+.design{
+    display: block;
+    margin: 0px auto;
+    padding: 2px 30px;
+    background-color: rgb(39, 243, 199);
+    width: 20px;
+
+}
+form select{
+    height: 40px;
+    width: 70%;
+    float: right;
+    margin-bottom: 10px;
+    background-color: rgb(39, 243, 199);
+}
+
+form input[type ="number"]{
+    background-color:rgb(39, 243, 199);
+}
+
+form div{
+    margin-bottom: 15px;
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/dsBuffer.bmp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.landing{
+   
+    height: 89vh;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+section{
+    overflow:hidden;
+    color:rgb(39, 243, 199) ;
+    background-color:  rgb(7, 12, 12);
+    position: relative;
+}
+
+#send{
+    margin: 0px auto;
+    width: 100px;
+    color:rgb(39, 243, 199) ;
+    background-color:  rgb(7, 12, 12);
+    border-radius: 5px;
+    outline-color: rgb(7, 12, 12);
+}
+
+#send:hover{
+    background-color: rgb(39, 243, 199);
+    color: rgb(7, 12, 12);;
+}
+.navigation{
+    border: 1px solid  gray;
+   margin: 70px;
+}
+
+.display span {
+    color: white;
+    font-weight: 500;
+}
+
+footer{
+    background-color: rgb(39, 243, 199);
+    height: 40px;
+    padding-top: 10px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+
