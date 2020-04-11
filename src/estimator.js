@@ -1,5 +1,4 @@
 let data = {}
-let time;
 const covid19ImpactEstimator = (data) => {
 
 
