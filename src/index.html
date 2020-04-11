@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Covid-19 Estimator</title>
+</head>
+
+<body data-spy="scroll" data-target="id" data-offset="1" id="home">
+
+    <!-- Narbar Markup -->
+    <nav class="navbar navbar-expand-lg  bg-dark">
+        <p class="navbar-brand" href="#">#BuildforSDGChallenge 2020</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent ">
+            <ul class="navbar-nav ml-auto mr-4">
+                <li class="nav-item active ">
+                    <a class="nav-link mr-5" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#estimator">Open Estimator <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Landing page markup -->
+    <header>
+        <div class="col-6 offset-3 text-center text-light landing">
+            <h2> Welcome to the #BuildforSDGChallenge 2020.</h2>
+            <p>This project is aimed at combating the Covid-19 pandemic ravaging the world by
+                evaluating some important pandemic variables to achieve Sustainable Development Goals (SDG)</p>
+            <a class="btn" href="#estimator">Get Started</a>
+        </div>
+
+
+
+    </header>
+
+
+    <!-- Estimator (Form & UI Display area) -->
+    <Section id="estimator" class="text-center">
+        <h2 class="title">COVID-19 <span>Estimator</span></h2>
+        <div class="design"></div>
+        <div class=" row mt-3 display">
+            <form id="form" class="col-md-3 form-group pl-4">
+                <p>please fill in the data for your Region.....</p>
+                <div>
+                    <label for="name">Region</label>
+                    <select class="select name" name="name">
+                        <option value="Africa">Africa</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="North-america">North America</option>
+                        <option value="South-america">South America</option>
+
+                    </select>
+                </div>
+                <div>
+                    <input type="number" id="avgAge" step="0.1" placeholder="Enter Average Age" class="form-control"
+                        required>
+                </div>
+                <div>
+                    <input type="number" id="avgDailyIncomeInUSD" placeholder="Enter Average Daily Income (USD)"
+                        class="form-control" required </div>
+                </div>
+                <div>
+                    <input type="number" id="avgDailyIncomePopulation" step="0.01"
+                        placeholder="Average Daily Income Percentage E.g 0.71" class="form-control" min="0" max="1"
+                        required </div>
+                </div>
+                <div>
+                    <label for="period">Period Type</label>
+                    <select id="periodType" class="select" required>
+                        <option value="Day">Day</option>
+                        <option value="Week">Week</option>
+                        <option value="Month">Month</option>
+
+                    </select>
+                </div>
+
+
+
+                <div>
+
+                    <input type="number" id="timeToElapse" placeholder="Time To Elapse" class="form-control" required>
+                </div>
+
+                <div>
+                    <input type="number" id="reportedCases" placeholder="Reported Cases" class="form-control" required>
+                </div>
+                <div>
+                    <input type="number" id="population" placeholder="Population" class="form-control" required>
+                </div>
+
+                <div>
+                    <input type="number" id="totalHospitalBeds" placeholder="Total Hospital Beds" class="form-control"
+                        required>
+                </div>
+                <input type="submit" value="Submit" id="send">
+            </form>
+
+            <div class="col-md-3">
+                <h6 class="text-light">According to the following data</h6>
+                <div>
+                    <p>Name of Region: <span id="name"></span></p>
+                </div>
+                <div>
+                    <p>Average Age:<span class="avgAge"></span></p>
+                </div>
+                <div>
+                    <p>Average daily income in USD:<span class="avgDailyIncomeInUSD"></span></p>
+                </div>
+                <div>
+                    <p>Percentage average daily income of population:<span class="avgDailyIncomePopulation"></span></p>
+                </div>
+                <div>
+                    <p>Period type:<span class="periodType"></span></p>
+                </div>
+                <div>
+                    <p>Time to elapse:<span class="timeToElapse"></span></p>
+                </div>
+                <div>
+                    <p>Number of reported cases:<span class="reportedCases"></span></p>
+                </div>
+                <div>
+                    <p>Population:<span class="population"></span></p>
+                </div>
+                <div>
+                    <p>Total hospital beds<span class="totalHospitalBeds"></span></p>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+
+                <h6 class="text-light">The Estimation for best case:</h6>
+                <div>
+                    <p>Currently infected:<span class="currentlyInfected"></span></p>
+                </div>
+                <div>
+                    <p>Infections requested by time:<span class="infectionsRequestedByTime"></span></p>
+                </div>
+                <div>
+                    <p>Severecases by requested time:<span class="severeCasesByRequestedTime"></span></p>
+                </div>
+                <div>
+                    <p>Hospital beds by requested time:<span class="hospitalBedsByRequestedTime"></span></p>
+                </div>
+                <div>
+                    <p>Cases for ICU by requested time:<span class="casesForICUByRequestedTime"></span></p>
+                </div>
+                <div>
+                    <p>Cases for ventilators by requested time:<span class="casesForVentilatorsByRequestedTime"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>Dollars in flight:<span class="dollarsInFlight"></span></p>
+                </div>
+
+
+            </div>
+            <div class="col-md-3">
+                <div class="severe-case">
+                    <h6 class="text-light">The Estimation for severe case:</h6>
+                    <div>
+                        <p>Currently infected:<span class="SevereCurrentlyInfected"></span></p>
+                    </div>
+                    <div>
+                        <p>Infections requested by time:<span class="severeImpactInfectionsRequestedByTime"></span></p>
+                    </div>
+                    <div>
+                        <p>Severecases by requested time:<span class="severeImpactCasesByRequestedTime"></span></p>
+                    </div>
+                    <div>
+                        <p>Hospital beds by requested time:<span class="severeImpactHospitalBedsByRequestedTime"></span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Cases for ICU by requested time:<span class="severeImpactCasesForICUByRequestedTime"></span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Cases for ventilators by requested time:<span
+                                class="severeImpactCasesForVentilatorsByRequestedTime"></span></p>
+                    </div>
+                    <div>
+                        <p>Dollars in flight:<span class="severeImpactdollarsInFlight"></span></p>
+                    </div>
+                    <a href="#home" class="btn  navigation">Go Home</a>
+                </div>
+
+            </div>
+
+        </div>
+    </Section>
+
+
+    <!-- Footer -->
+    <footer class="text-center footer">
+        <p>Designed by Ifeanyi Okoye &copy;2020 for #SDG2020</p>
+    </footer>
+
+
+    <script src="./estimator.js"></script>
+</body>
+
+</html>
