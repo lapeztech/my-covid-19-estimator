@@ -1,12 +1,9 @@
 let data = {}
+
+
 const covid19ImpactEstimator = (data) => {
 
-
-
-
     const form = document.querySelector('#form');
-
-    let time = '';
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
